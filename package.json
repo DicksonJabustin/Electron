@@ -1,0 +1,31 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "my-app",
+    "win": {
+      "target": {
+        "target": "nsis"
+      },
+      "icon": "path/to/your/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "uninstallDisplayName": "my-app-uninstaller",
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3"
+  }
+}
